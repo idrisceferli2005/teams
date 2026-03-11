@@ -10,7 +10,7 @@ const initialState = {
 
 // GET Players
 export const fetchPlayers = createAsyncThunk("players/fetchPlayers", async () => {
-  const res = await api.get("players");
+  const res = await api.get("Player");
   return res.data;
 });
 
@@ -18,7 +18,7 @@ export const fetchPlayers = createAsyncThunk("players/fetchPlayers", async () =>
 export const createPlayer = createAsyncThunk(
   "players/createPlayer",
   async (player) => {
-    const res = await api.post("players", player);
+    const res = await api.post("Player", player);
     return res.data;
   }
 );
@@ -27,7 +27,7 @@ export const createPlayer = createAsyncThunk(
 export const deletePlayer = createAsyncThunk(
   "players/deletePlayer",
   async (id) => {
-    await api.delete(`players/${id}`);
+    await api.delete(`Player/${id}`);
     return id;
   }
 );
@@ -36,7 +36,7 @@ export const deletePlayer = createAsyncThunk(
 export const updatePlayer = createAsyncThunk(
   "players/updatePlayer",
   async ({ id, player }) => {
-    const res = await api.put(`players/${id}`, player);
+    const res = await api.put(`Player/${id}`, player);
     return res.data;
   }
 );

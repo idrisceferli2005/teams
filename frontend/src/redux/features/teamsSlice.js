@@ -15,19 +15,19 @@ export const fetchTeams = createAsyncThunk("teams/fetchTeams", async () => {
 
 // CREATE Team
 export const createTeam = createAsyncThunk("teams/createTeam", async (team) => {
-  const res = await api.post("teams", team);
+  const res = await api.post("Team", team);
   return res.data;
 });
 
 // DELETE Team
 export const deleteTeam = createAsyncThunk("teams/deleteTeam", async (id) => {
-  await api.delete(`teams/${id}`);
+  await api.delete(`Team/${id}`);
   return id;
 });
 export const updateTeam = createAsyncThunk(
   "teams/updateTeam",
   async ({ id, team }) => {
-    const res = await api.put(`teams/${id}`, team);
+    const res = await api.put(`Team/${id}`, team);
     return res.data;
   },
 );

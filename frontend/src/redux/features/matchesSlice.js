@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import api from "../../api/axios";
 
-
 const initialState = {
   matches: [],
   loading: false,
@@ -12,18 +11,18 @@ const initialState = {
 export const fetchMatches = createAsyncThunk(
   "matches/fetchMatches",
   async () => {
-    const res = await api.get("matches");
+    const res = await api.get("Match");
     return res.data;
-  }
+  },
 );
 
 // CREATE Match
 export const createMatch = createAsyncThunk(
   "matches/createMatch",
   async (match) => {
-    const res = await api.post("matches", match);
+    const res = await api.post("Match", match);
     return res.data;
-  }
+  },
 );
 
 const matchesSlice = createSlice({
