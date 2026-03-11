@@ -9,7 +9,7 @@ const initialState = {
 
 // GET Teams
 export const fetchTeams = createAsyncThunk("teams/fetchTeams", async () => {
-  const res = await api.get("teams");
+  const res = await api.get("Team");
   return res.data;
 });
 

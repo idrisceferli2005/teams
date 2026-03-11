@@ -1,0 +1,69 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f5f6fa;
+}
+
+.card {
+  width: 620px;
+  padding: 40px 30px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.logoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.logo {
+  width: 70px;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #444;
+  font-weight: 500;
+}
+
+.title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.desc {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.form {
+  text-align: left;
+}
+
+.loginBtn {
+  height: 40px;
+  font-weight: 500;
+  background-color: #0a1e44;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: #142f66 !important;
+  }
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+}
