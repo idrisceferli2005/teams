@@ -4,7 +4,7 @@ import api from "../../api/axios";
 const initialState = {
   user: null,
   loading: false,
-  error: null
+  error: null,
 };
 
 export const loginUser = createAsyncThunk(
@@ -16,7 +16,7 @@ export const loginUser = createAsyncThunk(
     } catch (err) {
       return thunkAPI.rejectWithValue(err.response.data);
     }
-  }
+  },
 );
 
 const authSlice = createSlice({
